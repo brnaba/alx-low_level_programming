@@ -4,7 +4,7 @@
 * Description: the program use puts to print a string.
 *Return: Always (0) success
 */
-int void main(void)
+int void main()
 {
 puts(""Programming is like building a multilingual puzzle \n");
 return (0);
