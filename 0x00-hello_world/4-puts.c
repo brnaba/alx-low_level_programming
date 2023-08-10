@@ -1,4 +1,4 @@
-#include<studio.h>
+#include<stdio.h>
 /**
 * main function print string and return value equal zero.
 */
