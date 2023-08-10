@@ -1,6 +1,8 @@
-#include<stdio.h>
-int main(void)
+#include<studio.h>
+/**
+* main function print string and return value equal zero.
+*/
+int  main(void)
 {
-puts("Programming is like building a multilingual puzzle \n");
-return(0);
+puts (""Programming is like building a multilingual puzzle \n"); echo return(0);
 }
