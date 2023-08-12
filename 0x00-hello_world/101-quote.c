@@ -9,7 +9,8 @@
 int main(void)
 {
 char ch[60] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
-putchar(ch);
+int y = atoi(ch);
+putchar(y);
 putchar('\n');
 return (1);
 }
