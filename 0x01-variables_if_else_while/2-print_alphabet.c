@@ -3,17 +3,17 @@
 #include <time.h>
 /**
 * main - Entry point
-* Description: the program generates random numbers for variable n.
+* Description: the program prints alphabet in lowercase .
 *Return: Always (0) success
 */
 int main(void)
 {
-char  ch  = "a";
-while (ch  <= " z")
+char  ch  = 'a';
+while (ch  <= 'z')
 {
 putchar(ch);
 ch++;
 }
-putchar("\n");
+putchar('\n');
 return (0);
 }
