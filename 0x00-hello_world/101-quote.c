@@ -8,7 +8,7 @@
 */
 int main(void)
 {
-char ch[60] = "and that piece of art is useful" - Dora Korpar, 2015-10-19";
+char ch[60] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
 putchar(ch);
 putchar('\n');
 return (1);
