@@ -14,3 +14,5 @@ while (*s != '\0')
 longs++;
 s++;
 }
+return (longs);
+}
