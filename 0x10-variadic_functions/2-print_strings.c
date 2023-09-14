@@ -2,34 +2,32 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
- * print_strings - function that prints strings.
- * @n: resepresents the number of arguments
- * @separator: resepresents the seperator b/w the numbers
- * Return: Always 0.
+ * print_strings - Entry Point
+ * @separator: comma space
+ * @n: number of elements
+ * Return: void
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	/* creating va_list to store the variable argument list */
-	va_list strings;
-	unsigned int count;
-	char *str;
+	char *sep, *ptr;
+	unsigned int i;
+	va_list list;
 
-	/* init valist for the number of arguments */
-	va_start(strings, n);
+	if (separator == NULL || *separator == 0)
+		sep = "";
+	else
+		sep = (char *) separator;
+	va_start(list, n);
 
-	/* loop through/access all arguments stored in the valist */
-	for (count = 0; count < n; count++)
+	if (n > 0)
+		printf("%s", va_arg(list, char *));
+	for (i = 1; i < n; i++)
 	{
-		str = va_arg(strings, char *);
-		if (str == NULL)
-			printf("nil");
-		else
-		{
-			printf("%s", str);
-			if (count < (n - 1) && separator != NULL)
-				printf("%s", separator);
-		}
+		ptr = va_arg(list, char*);
+		if (ptr == NULL)
+			ptr = "(nil)";
+		printf("%s%s", sep, ptr);
 	}
-	va_end(strings); /* clean up the list */
 	printf("\n");
+	va_end(list);
 }
